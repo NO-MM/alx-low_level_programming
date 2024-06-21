@@ -3,7 +3,7 @@
 /**
  *main - Enty point, prints "Programming is like building a multilingual puzzle
  *
- *return: Always 0 (Success)
+ *returns: Always 0 (Success)
  */
 int main(void)
 {
