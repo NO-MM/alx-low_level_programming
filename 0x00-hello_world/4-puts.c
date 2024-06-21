@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- *main - Enty point, prints "Programming is like building a multilingual puzzle
+ *main - Entry point, prints "Programming is like building
+ *a multilingual puzzle"
  *
  *returns: Always 0 (Success)
  */
