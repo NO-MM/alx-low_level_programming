@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- *main - Entry point, printts Hello, World
+ *main - Entry point
  *
  *Return: Always 0 (Success)
  */
 int main(void)
 {
-printf("Hello, World"); /*Inline Comment*/
+printf("Holberton School");
 return (0);
 }
