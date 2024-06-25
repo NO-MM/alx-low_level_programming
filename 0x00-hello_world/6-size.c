@@ -1,17 +1,15 @@
 #include <stdio.h>
-
-int main(int argc, char *argv[])
+int main(void)
 {
-int intType;
-float floatType;
-double doubleTye;
-char charType;
-
-printf("Size of int: %zu byte\n", Sizeof(intType));
-printf("Size of float: %zu byte\n", Sizeof(floatType));
-printf("Size of double: %zu byte\n", Sizeof(doubleType));
-printf("Size of char: %zu byte\n", Sizeof(charType));
-
+int 1;
+float 2;
+long int 3;
+long long int 4;
+char 5;
+printf("Size of int: %lu byte(s)\n", (unsigned long)sizeof(1));
+printf("Size of float: %lu byte(s)\n", (unsigned long)sizeof(2));
+printf("Size of long int: %lu byte(s)\n", (unsigned long)sizeof(3));
+printf("Size of long long int: %lu byte(s)\n", (unsigned long)sizeof(4));
+printf("Size of char: %lu byte(s)\n", (unsigned long)sizeof(5));
 return (0);
-
 }

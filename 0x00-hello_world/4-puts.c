@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- *main - Entry point, prints "Programming is like building
- *a multilingual puzzle"
+ *main - A program that printa a line with puts functio
+ *n
+ *
+ *Discription: A program that printa a line with puts function
  *
  *returns: Always 0 (Success)
  */
