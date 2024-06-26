@@ -4,7 +4,7 @@
  *
  * Return: void
  */
-void print_alphabet_x10(void)
+int void print_alphabet_x10(void)
 {
 char lt;
 int i;
