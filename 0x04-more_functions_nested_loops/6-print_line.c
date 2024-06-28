@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Print line - The function that draws a straight line in terminal
+ * Print_line - This function draws a straight line in terminal
  *
  * Return: void
  */
