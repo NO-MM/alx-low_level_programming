@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * int _strlen - This function returnns the lenght of a string
- *
+ * _strlen - This function returnns the lenght of a string
+ *@s: The string
  *return: The length of @str
  */
 int _strlen(char *s)
@@ -12,5 +12,5 @@ while (*s != '\0')
 length++;
 s++;
 }
-return length;
+return (length);
 }
