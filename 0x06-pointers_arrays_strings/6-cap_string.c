@@ -21,10 +21,6 @@ else if (cap_next_alp && isalpha(*ptr))
 *ptr = toupper(*ptr);
 cap_next_alp = 0;
 }
-else;
-}
-cap_next_alp = 0;
-}
 ptr++;
 }
 return (str);

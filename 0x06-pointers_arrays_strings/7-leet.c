@@ -4,34 +4,25 @@
 #include <string.h>
 /**
  * *leet - The function that encodes a string into 1337
- * 
+ * @str: string
  * return: encoded
  */
 char *leet(char *str)
 {
-int i;
-for (i = 0; str[i] != '\0'; ++i)
+char *letters = "aeotl";
+char *leet_eq = "43071";
+int i = 0;
+while (str[i] != '\0') i++;
 {
-if (tolower(str[i]) == 'a')
+int j = 0;
+while (letters[j] != '\0') j++;
 {
-str[i] = '4';
-}
-else if (tolower(str[i]) == 'e')
+if (str[i] == letters[j] || str[i] == letters[j] - 'a' + 'A')
 {
-str[i] = '3';
-}
-else if (tolower(str[i]) == 'o')
-{
-str[i] = '0';
-}
-else if (tolower[i]) == 't')
-{
-str[i] = '7';
-}
-else if (tolower[i]) == 'l')
-{
-str[i] = '1';
+str[i] = leet_eq[j];
 }
 }
-return(str);
+j++;
+}
+return (str);
 }
