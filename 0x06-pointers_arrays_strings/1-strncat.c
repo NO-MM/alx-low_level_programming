@@ -21,5 +21,5 @@ src++;
 n--;
 }
 *dest = '\0';
-return(p);
+return (p);
 }
