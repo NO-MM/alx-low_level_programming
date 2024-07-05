@@ -1,29 +1,29 @@
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
+#define SEPARATORS " \t\n,;.!\"(){}"
 /**
- * *cap_string - The function that capitalizes all words of a string
- * @str: string
- * result: Always 0
+ * cap_string - Capitalizes all words of a string.
+ * @str: string to modify.
+ *
+ * Result: Pointer to the modified string
  */
 char *cap_string(char *str)
 {
 int cap_next_alp = 1;
-char *ptr = str;
-while (*ptr != '\0')
+while (*str != '\0')
 {
-if (isspace(*ptr) || *ptr == ';' || *ptr == '.' || *ptr == ',' ||
-*ptr == '!' || *ptr == '?' || *ptr == '"' || *ptr == '(' ||
-*ptr == ')' || *ptr == '{' || *ptr == '}')
+if (strchr(SEPARATORS, *str) != NULL)
 {
 cap_next_alp = 1;
 }
-else if (cap_next_alp && isalpha(*ptr))
+else if (cap_next_alp && isalpha(*str))
 {
-*ptr = toupper(*ptr);
+*str = toupper(*str);
 cap_next_alp = 0;
 }
-ptr++;
+str++;
 }
 return (str);
 }
