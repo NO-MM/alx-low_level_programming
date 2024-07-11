@@ -9,10 +9,10 @@
  */
 int is_prime_number(int n)
 {
-  return (n);
+return (n);
 }
 /**
- * check _prime - The funciton that returns 1 if the
+ * check_prime - The funciton that returns 1 if the
  * integer is a prime number, otherwise return 0.
  * @n: int
  * @i: int
@@ -32,5 +32,5 @@ if ((n / i) < i)
 {
 return (1);
 }
- return (n);
+return (n);
 }
