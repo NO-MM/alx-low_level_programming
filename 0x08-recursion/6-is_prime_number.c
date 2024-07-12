@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+int actual_prime_number(int n, int i);
 /**
  * is_prime_number - The funciton that returns 1 if the
  * integer is a prime number, otherwise return 0.
@@ -9,28 +10,27 @@
  */
 int is_prime_number(int n)
 {
-return (n);
+if  (n <= 1)
+return (0);
+return (actual_prime_number(n, n - 1));
 }
 /**
- * check_prime - The funciton that returns 1 if the
- * integer is a prime number, otherwise return 0.
- * @n: int
- * @i: int
- * Return: 1 if integer is prime.
+ * actual_prime_number - The funtion that calculate if a
+ * number is prime recursively.
+ * @n: The number to be evaluated.
+ * @i: iterator
+ *
+ * Return: 1 if n is prime, 0 if not
  */
-int check_prime(int n, int i)
+int actual_prime_number(int n, int i)
 {
-if (n <= 1)
-{
-return (0);
-}
-if (n % i == 0 && i > 1)
-{
-return (0);
-}
-if ((n / i) < i)
+if (i == 1)
 {
 return (1);
 }
-return (n);
+if (n % i == 0 && i > 0)
+{
+return (0);
+}
+return (actual_prime_number(n, i - 1));
 }
