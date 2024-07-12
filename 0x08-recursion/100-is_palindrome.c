@@ -32,7 +32,7 @@ return (1 + _strlen_recursion(s + 1));
  */
 int comparator(char *s, int s1, int b1)
 {
-if(s1 >= b1)
+if (s1 >= b1)
 {
 return (1);
 }
