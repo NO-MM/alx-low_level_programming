@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * free_grind - Prints a grid of integers.
+ * free_grid - Prints a grid of integers.
  * @grid: address of two dimensional grid.
  * @height: heigth of the grid.
  *
