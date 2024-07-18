@@ -14,9 +14,9 @@ int i, c, j = 0, k = 0;
 char *s;
 if (ac == 0 || av == NULL)
 return (NULL);
-for (i =0; i < ac; i++)
+for (i = 0; i < ac; i++)
 {
-for (c = 0; av [i][c]; c++)
+for (c = 0; av[i][c]; c++)
 k++;
 }
 k += ac;

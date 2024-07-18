@@ -18,7 +18,7 @@ i++;
 s = malloc(sizeof(char) * (i + 1));
 if (s == NULL)
 return (NULL);
-for (a =0; str[a]; a++)
+for (a = 0; str[a]; a++)
 s[a] = str[a];
 return (s);
 }
