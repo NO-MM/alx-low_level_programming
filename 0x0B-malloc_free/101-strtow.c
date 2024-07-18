@@ -3,7 +3,7 @@
 int count_word(char *s);
 char **strtow(char *str);
 /**
- * count_words - Count the number of words contained within a string.
+ * count_word - Count the number of words contained within a string.
  * @s: A string
  *
  * Return: The number of words contained within a string.
@@ -13,7 +13,7 @@ int count_word(char *s)
 int i = 0, l = 0, w = 0;
 for (l = 0; s[l] != '\0'; l++)
 {
-if(s[l] == ' ')
+if (s[l] == ' ')
 i = 0;
 else if (i == 0)
 {
@@ -37,18 +37,18 @@ while (*(str + i))
 i++;
 words = count_word(str);
 if (words == 0)
-return (NULL); 
-strings = (char**)malloc(sizeof(char*) * (words + 1));
+return (NULL);
+strings = (char **)malloc(sizeof(char *) * (words + 1));
 if (strings == NULL)
 return (NULL);
 for (i = 0; str[i] != '\0'; i++)
 {
-if (str[i] == ' ' || str [i] == '\0')
+if (str[i] == ' ' || str[i] == '\0')
 {
-if(l)
+if (l)
 {
 end = i;
-tmp = (char*)malloc(sizeof(char) * (l + 1));
+tmp = (char *)malloc(sizeof(char) * (l + 1));
 if (tmp == NULL)
 {
 return (NULL);
