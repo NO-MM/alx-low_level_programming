@@ -1,44 +1,27 @@
 #include "main.h"
 #include <stdlib.h>
-int word_len(char *str);
-int count_words(char *str);
+int count_word(char *s);
 char **strtow(char *str);
 /**
- * word_len - Spltt string into words
- * @str: A string
- *
- * Return: If function fail return NULL.
- */
-int word_len(char *str)
-{
-int index = 0, len = 0;
-while (*(str + index) && *(str + index) != ' ')
-{
-len++;
-index++;
-}
-return (len);
-}
-/**
  * count_words - Count the number of words contained within a string.
- * @str: A string
- * 
+ * @s: A string
+ *
  * Return: The number of words contained within a string.
  */
-int count_words(char *str)
+int count_word(char *s)
 {
-int index = 0, words = 0, len = 0;
-for (index = 0; *(str + index); index++)
+int i = 0, l = 0, w = 0;
+for (l = 0; s[l] != '\0'; l++)
 {
-len++;
-for (index = 0; index < len; index++);
+if(s[l] == ' ')
+i = 0;
+else if (i == 0)
+{
+i = 1;
+w++;
 }
-if (*(str + index) != ' ')
-{
-words++;
-index += word_len(str + index);
 }
-return (words);
+return (w);
 }
 /**
  * strtow - Split a string into words.
@@ -47,33 +30,41 @@ return (words);
  * Return: If function fail return NULL.
  */
 char **strtow(char *str)
-char **strings;
-int index = 0;
-int words, w, letters, l;
 {
-if (str == NULL || str[0] == '\0')
-{
-return (NULL);
-}
-words = count_words(str);
+char **strings, *tmp;
+int i = 0, words, w = 0, j, l = 0, start = 0, end;
+while (*(str + i))
+i++;
+words = count_word(str);
 if (words == 0)
+return (NULL); 
+strings = (char**)malloc(sizeof(char*) * (words + 1));
+if (strings == NULL)
+return (NULL);
+for (i = 0; str[i] != '\0'; i++)
+{
+if (str[i] == ' ' || str [i] == '\0')
+{
+if(l)
+{
+end = i;
+tmp = (char*)malloc(sizeof(char) * (l + 1));
+if (tmp == NULL)
 {
 return (NULL);
-} 
-strings = malloc(sizeof(char) * (letters + 1));
-if (strings[w] == NULL)
+}
+for (j = 0; start < end; j++)
 {
-for (; w >= 0; w--)
+tmp[j] = str[start++];
 }
-free(strings[w]);
-free(strings);
-{
-return (NULL);
+tmp[j] = '\0';
+strings[w] = tmp;
+w++;
+l = 0;
 }
-for (l = 0; l < letters; l++)
-strings[w][l] = str[index++];
 }
-strings[w][l] = '\0';
+else if (l++ == 0)
+start = i;
 }
 strings[w] = NULL;
 return (strings);
