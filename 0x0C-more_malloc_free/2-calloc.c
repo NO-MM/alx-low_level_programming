@@ -18,7 +18,7 @@ s[i] = b;
 return (s);
 }
 /**
- * *calloc - The funtion that allocates memory for an array.
+ * *_calloc - The funtion that allocates memory for an array.
  * @nmemb: The number of allements in the array.
  * @size: The size of each element.
  *
@@ -30,7 +30,7 @@ char *ptr;
 if (nmemb == 0 || size == 0)
 return (NULL);
 ptr = malloc(size * nmemb);
-if ( ptr == NULL)
+if (ptr == NULL)
 return (NULL);
 _memset(ptr, 0, nmemb * size);
 return (ptr);
