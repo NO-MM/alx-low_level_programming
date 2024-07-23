@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- * _strlen - The function that returns the lenght of a string.
+ * int_strlen - The function that returns the lenght of a string.
  * @s: A string to elevate.
  *
  * Return: The lenght of a string.
