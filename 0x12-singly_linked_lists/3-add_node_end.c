@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * int_strlen - The function the finds a length
+ * _strlen - The function the finds a length
  * of a string.
  * @str: A string.
  *
