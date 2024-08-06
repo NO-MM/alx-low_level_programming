@@ -2,7 +2,7 @@
 /**
  * sum_listint - A function that return the sum of all the data
  * @head: pointer to the list.
- * 
+ *
  * Return: sum.
  */
 int sum_listint(listint_t *head)

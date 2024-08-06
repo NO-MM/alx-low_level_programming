@@ -20,7 +20,7 @@ return (new_node);
  * @head:  A pointer to the first element of the list.
  * @idx: Index to the position the new node is to be inserted.
  * @n: The data of the new node created.
- * 
+ *
  * Return: The address of the newly created node.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
