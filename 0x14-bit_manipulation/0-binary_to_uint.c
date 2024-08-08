@@ -26,7 +26,7 @@ for (i = 0; b[i] != '\0'; i++)
 if (b[i] != '0' && b[i] != '1')
 return (0);
 for (d = len - 1; d > 0; d--)
-pow = pow * base;
+pow = pow *base;
 sum = sum + (pow * (b[i] - 48));
 len--;
 pow = 1;

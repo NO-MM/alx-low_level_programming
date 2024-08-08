@@ -22,7 +22,7 @@ putchar('0');
  * of a number.
  * @n:
  *
- * Return: void. 
+ * Return: void.
  */
 void print_binary(unsigned long int n)
 {

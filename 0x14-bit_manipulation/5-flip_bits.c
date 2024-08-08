@@ -14,7 +14,7 @@ result = n ^ m;
 for (count = 0; result > 0;)
 {
 if ((result & 1) == 1)
-count ++;
+count++;
 result = result >> 1;
 }
 return (count);
