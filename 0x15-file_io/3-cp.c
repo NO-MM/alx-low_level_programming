@@ -4,8 +4,8 @@
 /**
  * file_from_to - A function that checks if a file is opened
  * and handle errors.
- * @file_from: A file to copy from to chech.
- * @file_to: A destination to copy a file.
+ * @file_f: A file to copy from to chech.
+ * @file_t: A destination to copy a file.
  *
  * Return: No return.
  */
@@ -40,7 +40,7 @@ dprintf(STDERR_FILENO, "Usage: cp file_f file_t\n");
 exit(97);
 }
 file_f = open(argv[1], O_RDONLY);
-file_t = open(argv[2], O_CREAT |O_WRONLY | O_TRUNC | O_APPEND, 0664);
+file_t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 file_from_to(file_f, file_t, argv);
 num_chars = 1024;
 while (num_chars == 1024)
