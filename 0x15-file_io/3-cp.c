@@ -6,6 +6,7 @@
  * and handle errors.
  * @file_f: A file to copy from to chech.
  * @file_t: A destination to copy a file.
+ * @argv: argument vector.
  *
  * Return: No return.
  */
