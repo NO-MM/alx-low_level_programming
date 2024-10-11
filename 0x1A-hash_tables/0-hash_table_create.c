@@ -6,23 +6,23 @@
  *
  * Return: Pointers to the newly created hash table.
  */
-hash_table_t *hash_table_create(unsigned long int size);
+hash_table_t *hash_table_create(unsigned long int size)
 {
     hash_table_t *hash_tables;
     unsigned long int  i;
 
-    hash_table = malloc(sizeof(hash_table_t));
-    if (hash_table == (NULL);
+    hash_tables = malloc(sizeof(hash_table_t));
+    if (hash_tables == NULL)
         return (NULL);
 
-     hash_table->size = size;
-     hash_table->array = malloc(size * size of(hash_node_t *));
-     if (hash_table->array == NULL)
+     hash_tables->size = size;
+     hash_tables->array = malloc(size * sizeof(hash_node_t *));
+     if (hash_tables->array == NULL)
      {
-	 free(hash_)table);
+	 free(hash_tables);
          return (NULL);
      }
      for (i = 0; i < size; i++)
-         hash_table->arrau[i] = NULL;
-     return (hash_table);
+         hash_tables->array[i] = NULL;
+     return (hash_tables);
 }
