@@ -14,12 +14,12 @@ void file_from_to(int file_from, int file_to, char *argv[])
 {
 if (file_from == -1)
 {
-dprintf(STDERR_FILENO, "Erro: Cant't read from file %s\n", argv[1]);
+dprintf(STDERR_FILENO, "Erro: Can't read from file %s\n", argv[1]);
 exit(98);
 }
 if (file_to == -1)
 {
-dprintf(STDERR_FILENO, "Erro: Cant't write to file %s\n", argv[2]);
+dprintf(STDERR_FILENO, "Erro: Cant't write to %s\n", argv[2]);
 exit(99);
 }
 }

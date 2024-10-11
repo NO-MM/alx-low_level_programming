@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_listint - A function that prints alll emements of
+ * print_listint - A function that prints all emements of
  * a listint_t list.
  * @h: The head pointer to the list.
  *
